@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface LIstTableViewDataSource : NSObject
+@interface LIstTableViewDataSource : NSObject <UITableViewDataSource>
+
+
 
 @end

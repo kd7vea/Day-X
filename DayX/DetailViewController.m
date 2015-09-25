@@ -8,7 +8,12 @@
 
 #import "DetailViewController.h"
 
-@interface DetailViewController ()
+
+@interface DetailViewController ()<UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
+
 
 @end
 
@@ -17,7 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+
 }
+
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+-(IBAction)clearActionTapped:(id)sender{
+        self.textField.text = @"";
+        self.textView.text = @"";
+}
+    
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
