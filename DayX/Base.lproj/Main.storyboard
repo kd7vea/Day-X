@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Qj-CB-CN6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8187.4" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4Qj-CB-CN6">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8151.3"/>
     </dependencies>
     <scenes>
         <!--interface-->
@@ -21,9 +22,10 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="entryCell" id="d76-0p-8s1">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="86" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d76-0p-8s1" id="bHy-vS-1cc">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -111,7 +113,11 @@
                             <constraint firstItem="grS-QH-0ax" firstAttribute="centerX" secondItem="7yi-sZ-RUh" secondAttribute="centerX" id="yWo-SC-jaS"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="1uK-nP-f5W">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="x09-OA-XsO"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="saveButtonTapped" destination="x09-OA-XsO" id="YvQ-9o-K6E"/>
                         <outlet property="textField" destination="7yi-sZ-RUh" id="lYQ-Ir-kHs"/>
                         <outlet property="textView" destination="grS-QH-0ax" id="rmE-gK-gL8"/>
                     </connections>

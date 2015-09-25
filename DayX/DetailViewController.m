@@ -7,6 +7,7 @@
 //
 
 #import "DetailViewController.h"
+#import "EntryController.h"
 
 
 @interface DetailViewController ()<UITextFieldDelegate>
@@ -37,7 +38,12 @@
         self.textView.text = @"";
 }
     
-
+-(IBAction)saveButtonTapped:(id)sender{
+    if (self.entry) {
+        self.entry.title = self.textField.text;
+        self.entry.bodyText = self.textView.text;
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
