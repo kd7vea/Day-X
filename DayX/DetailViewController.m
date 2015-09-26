@@ -5,7 +5,7 @@
 //  Created by Jake Estepp on 9/23/15.
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
-
+//correct version
 #import "DetailViewController.h"
 #import "EntryController.h"
 
