@@ -7,7 +7,7 @@
 //
 
 #import "EntryController.h"
-#import "Entry.h"
+
 
 @interface EntryController ()
 
@@ -48,6 +48,7 @@
     }
     NSMutableArray *mutableEntries = self.entries.mutableCopy;
     [mutableEntries removeObject: entry];
+    
     self.entries = mutableEntries;
 }
 

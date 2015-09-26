@@ -42,13 +42,18 @@
     if (self.entry) {
         self.entry.title = self.textField.text;
         self.entry.bodyText = self.textView.text;
+        self.entry.timeStamp = [NSDate date];
+    }else{
+        self.entry = [[EntryController sharedInstance] createEntryWithTitle:self.textField.text bodyText:self.textView.text];
     }
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
