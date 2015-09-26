@@ -27,6 +27,8 @@
     return sharedInstance;
 }
 
+// This is the createEntry method
+
 - (Entry *)createEntryWithTitle: (NSString *) title bodyText: (NSString *) bodyText {
     Entry * entry = [Entry new];
     entry.title = title;

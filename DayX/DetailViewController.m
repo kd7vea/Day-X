@@ -24,6 +24,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self updateWithEntry:self.entry];
+    
 
 }
 
@@ -46,6 +48,12 @@
     }else{
         self.entry = [[EntryController sharedInstance] createEntryWithTitle:self.textField.text bodyText:self.textView.text];
     }
+    
+}
+
+-(void)updateWithEntry:(Entry *) entry {
+    self.textField.text = entry.title;
+    self.textView.text = entry.bodyText;
     
 }
 

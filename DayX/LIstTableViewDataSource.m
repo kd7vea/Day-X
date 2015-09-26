@@ -6,22 +6,27 @@
 //  Copyright (c) 2015 DevMountain. All rights reserved.
 //
 
-#import "LIstTableViewDataSource.h"
+#import "ListTableViewDataSource.h"
+#import "EntryController.h"
 
 
 
 @implementation LIstTableViewDataSource
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Entry *entry = [EntryController sharedInstance].entries [indexPath.row];
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"entryCell"];
-    cell.textLabel.text =[NSString stringWithFormat:@"Entry %ld",  (long)indexPath.row];
+    cell.textLabel.text = entry.title;
     
     return cell;
 }
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    
+    return [EntryController sharedInstance].entries.count;
 }
 
 @end

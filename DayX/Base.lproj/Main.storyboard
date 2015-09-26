@@ -53,6 +53,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="PtO-a2-vqN" id="OkR-MQ-Ifp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
                 <customObject id="6cI-Ur-YRA" customClass="LIstTableViewDataSource"/>
@@ -114,10 +117,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1uK-nP-f5W">
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="x09-OA-XsO"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="x09-OA-XsO">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="CQT-EH-cQT" id="yNs-Ez-QhR"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="saveButtonTapped" destination="x09-OA-XsO" id="YvQ-9o-K6E"/>
                         <outlet property="textField" destination="7yi-sZ-RUh" id="lYQ-Ir-kHs"/>
                         <outlet property="textView" destination="grS-QH-0ax" id="rmE-gK-gL8"/>
                     </connections>
